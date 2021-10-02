@@ -7,7 +7,7 @@
     START BREADCRUMB TOP BAR
 ================================= -->
 <section class="breadcrumb-top-bar">
-    <div class="container" style="background-image: url("{{asset('images/img1.jpg')}}")">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb-list breadcrumb-top-list">
@@ -28,7 +28,7 @@
 <!-- ================================
     START BREADCRUMB AREA
 ================================= -->
-<section class="breadcrumb-area bread-bg-7 py-0">
+<section class="breadcrumb-area bread-bg-7 py-0" data-src="{{asset('images/img1.jpg')}}>
     <div class="breadcrumb-wrap">
         <div class="container">
             <div class="row">
