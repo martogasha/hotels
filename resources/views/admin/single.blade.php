@@ -28,7 +28,7 @@
 <!-- ================================
     START BREADCRUMB AREA
 ================================= -->
-<section class="breadcrumb-area bread-bg-7 py-0" style="background-image: url("{{asset('images/img1.jpg')}}")">
+<section class="breadcrumb-area bread-bg-7 py-0" style="background-image:"{{asset('images/img1.jpg')}}">
     <div class="breadcrumb-wrap">
         <div class="container">
             <div class="row">
