@@ -28,7 +28,7 @@
 <!-- ================================
     START BREADCRUMB AREA
 ================================= -->
-<section class="breadcrumb-area bread-bg-7 py-0" style="background-image:"{{asset('images/img1.jpg')}}">
+<section class="breadcrumb-area bread-bg-7 py-0">
     <div class="breadcrumb-wrap">
         <div class="container">
             <div class="row">
@@ -36,34 +36,32 @@
                     <div class="breadcrumb-btn">
                         <div class="btn-box">
 
-                            <a class="theme-btn" data-src="{{asset('images/img1.jpg')}}"
+                            <a class="theme-btn" data-src="{{asset('uploads/product/'.$img->image)}}"
                                data-fancybox="gallery"
                                data-caption="Showing image - 01"
                                data-speed="700">
                                 <i class="la la-photo mr-2"></i>More Photos
                             </a>
                         </div>
+                        @foreach($images as $image)
                         <a class="d-none"
                            data-fancybox="gallery"
-                           data-src="{{asset('images/img2.jpg')}}"
+                           data-src="{{asset('uploads/product/'.$image->image)}}"
                            data-caption="Showing image - 02"
                            data-speed="700"></a>
-                        <a class="d-none"
-                           data-fancybox="gallery"
-                           data-src="images/img3.jpg"
-                           data-caption="Showing image - 03"
-                           data-speed="700"></a>
-                        <a class="d-none"
-                           data-fancybox="gallery"
-                           data-src="images/img4.jpg"
-                           data-caption="Showing image - 04"
-                           data-speed="700"></a>
+                        @endforeach
+
                     </div><!-- end breadcrumb-btn -->
                 </div><!-- end col-lg-12 -->
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end breadcrumb-wrap -->
 </section><!-- end breadcrumb-area -->
+<style>
+    .bread-bg-7 {
+        background-image: url(../images/img6.jpg);
+    }
+</style>
 <!-- ================================
     END BREADCRUMB AREA
 ================================= -->
