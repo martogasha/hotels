@@ -10,13 +10,27 @@ use Illuminate\Http\Request;
 class ClientController extends Controller
 {
     public function index(){
-        return view('listing');
+        $hotels = Hotel::all();
+        return view('listing',[
+            'hotels'=>$hotels
+        ]);
+    }
+    public function home(){
+        $hotels = Hotel::all();
+            return view('welcome',[
+                'hotels'=>$hotels
+            ]);
+    }
+    public function single($id){
+        $hotel = Hotel::find($id);
+        $rooms = Room::where('hotel_id',$id)->get();
+        return view('single',[
+            'hotel'=>$hotel,
+            'rooms'=>$rooms
+        ]);
     }
     public function list(){
         return view('list');
-    }
-    public function single(){
-        return view('single');
     }
     public function addHotel(){
         $hotels = Hotel::all();
@@ -191,7 +205,7 @@ class ClientController extends Controller
 
 
         $saveHotel->save();
-        dd('ok');
+        return redirect()->back();
     }
     public function saveRoom(Request $request){
         $saveRoom = new Room();
@@ -354,6 +368,7 @@ class ClientController extends Controller
 
 
         $saveRoom->save();
+        return redirect()->back();
     }
     public function saveImages(Request $request){
         $saveImage = new Image();
@@ -366,6 +381,6 @@ class ClientController extends Controller
             $saveImage->image = $filename;
         }
         $saveImage->save();
-        dd('ok');
+        return redirect()->back();
     }
 }

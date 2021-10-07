@@ -99,9 +99,9 @@
                     <div class="single-content-wrap padding-top-60px">
                         <div id="description" class="page-scroll">
                             <div class="single-content-item pb-4">
-                                <h3 class="title font-size-26">Hilton Hotel and Resorts</h3>
+                                <h3 class="title font-size-26">{{$hotel->hotel_name}}</h3>
                                 <div class="d-flex align-items-center pt-2">
-                                    <p class="mr-2">Boston, MA, USA</p>
+                                    <p class="mr-2">{{$hotel->city}}</p>
                                     <p>
                                         <span class="badge badge-warning text-white font-size-16">4.7</span>
                                         <span>(4,209 Reviews)</span>
@@ -118,7 +118,7 @@
                                             </div>
                                             <div class="single-feature-titles">
                                                 <h3 class="title font-size-15 font-weight-medium">Hotel Type</h3>
-                                                <span class="font-size-13">4 Star</span>
+                                                <span class="font-size-13">{{$hotel->hotel_type}}</span>
                                             </div>
                                         </div><!-- end single-tour-feature -->
                                     </div><!-- end col-lg-4 -->
@@ -129,7 +129,7 @@
                                             </div>
                                             <div class="single-feature-titles">
                                                 <h3 class="title font-size-15 font-weight-medium">Minimum Stay</h3>
-                                                <span class="font-size-13">2 Nights</span>
+                                                <span class="font-size-13">{{$hotel->hotel_minimum_nights}}</span>
                                             </div>
                                         </div><!-- end single-tour-feature -->
                                     </div><!-- end col-lg-4 -->
@@ -140,189 +140,267 @@
                                             </div>
                                             <div class="single-feature-titles">
                                                 <h3 class="title font-size-15 font-weight-medium">Security Deposit</h3>
-                                                <span class="font-size-13">$279</span>
+                                                <span class="font-size-13">{{$hotel->security_deposit}}</span>
                                             </div>
                                         </div><!-- end single-tour-feature -->
                                     </div><!-- end col-lg-4 -->
+
                                     <div class="col-lg-4 responsive-column">
                                         <div class="single-tour-feature d-flex align-items-center mb-3">
                                             <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
                                                 <i class="la la-check"></i>
                                             </div>
                                             <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">City</h3>
-                                                <span class="font-size-13">Paris</span>
+                                                <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities}}</h3>
                                             </div>
                                         </div><!-- end single-tour-feature -->
                                     </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-times"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Cancellation</h3>
-                                                <span class="font-size-13">Strict</span>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">WI-FI</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Swimming Pool</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Television</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Air Conditioning</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Fitness Facility</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Entertainment</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Pick And Drop</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Room Service</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Pets Allowed</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Breakfast</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Free Parking</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Handicap Accessible</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Elevator In Building</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Suitable For Events</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
-                                    <div class="col-lg-4 responsive-column">
-                                        <div class="single-tour-feature d-flex align-items-center mb-3">
-                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                <i class="la la-check"></i>
-                                            </div>
-                                            <div class="single-feature-titles">
-                                                <h3 class="title font-size-15 font-weight-medium">Play Place</h3>
-                                            </div>
-                                        </div><!-- end single-tour-feature -->
-                                    </div><!-- end col-lg-4 -->
+                                    @if(isset($hotel->hotel_amenities1))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities1}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities2))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities2}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities3))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities3}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities4))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities4}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities5))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities5}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities6))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities6}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities7))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities7}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities8))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities8}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities9))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities9}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities10))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities10}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities11))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities11}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities12))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities12}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities13))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities13}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities14))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities14}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities15))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities15}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities16))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities16}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities17))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities17}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities18))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities18}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities19))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities19}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
+                                    @if(isset($hotel->hotel_amenities20))
+                                        <div class="col-lg-4 responsive-column">
+                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
+                                                    <i class="la la-check"></i>
+                                                </div>
+                                                <div class="single-feature-titles">
+                                                    <h3 class="title font-size-15 font-weight-medium">{{$hotel->hotel_amenities20}}</h3>
+                                                </div>
+                                            </div><!-- end single-tour-feature -->
+                                        </div><!-- end col-lg-4 -->
+                                    @endif
                                 </div><!-- end row -->
                             </div><!-- end single-content-item -->
                             <div class="section-block"></div>
                             <div class="single-content-item padding-top-40px padding-bottom-40px">
-                                <h3 class="title font-size-20">About Hilton Hotel and Resorts</h3>
-                                <p class="py-3">Per consequat adolescens ex, cu nibh commune temporibus vim, ad sumo viris eloquentiam sed. Mea appareat omittantur eloquentiam ad, nam ei quas oportere democritum. Prima causae admodum id est, ei timeam inimicus sed. Sit an meis aliquam, cetero inermis vel ut. An sit illum euismod facilisis, tamquam vulputate pertinacia eum at.</p>
-                                <p>Cum et probo menandri. Officiis consulatu pro et, ne sea sale invidunt, sed ut sint blandit efficiendi. Atomorum explicari eu qui, est enim quaerendum te. Quo harum viris id. Per ne quando dolore evertitur, pro ad cibo commune.</p>
+                                <h3 class="title font-size-20">About {{$hotel->hotel_name}} and {{$hotel->hotel_category}}</h3>
+                                <p class="py-3">{{$hotel->hotel_about}}</p>
                             </div><!-- end single-content-item -->
                             <div class="section-block"></div>
                         </div><!-- end description -->
@@ -419,587 +497,292 @@
                                     </form>
                                 </div><!-- end contact-form-action -->
                                 <h3 class="title font-size-20">Available Rooms</h3>
-                                <div class="cabin-type padding-top-30px">
-                                    <div class="cabin-type-item seat-selection-item d-flex">
-                                        <div class="cabin-type-img flex-shrink-0">
-                                            <img src="images/inside-cabin.jpg" alt="">
-                                        </div>
-                                        <div class="cabin-type-detail">
-                                            <h3 class="title">Standard Family Room</h3>
-                                            <div class="row padding-top-20px">
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-check"></i>
+                                @foreach($rooms as $room)
+                                    <div class="cabin-type padding-top-30px">
+                                        <div class="cabin-type-item seat-selection-item d-flex">
+                                            <div class="cabin-type-detail">
+                                                <h3 class="title">{{$room->room_name}}</h3>
+                                                <h6>{{$room->room_bed_type}}</h6>
+                                                <div class="row padding-top-20px">
+                                                    <div class="col-lg-6 responsive-column">
+                                                        <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                <i class="la la-check"></i>
+                                                            </div>
+                                                            <div class="single-feature-titles">
+                                                                <h3 class="title font-size-15 font-weight-medium">{{$room->room_feet}}</h3>
+                                                            </div>
                                                         </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">Free Wi-Fi</h3>
+                                                    </div><!-- end col-lg-6 -->
+                                                    <div class="col-lg-6 responsive-column">
+                                                        <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                <i class="la la-check"></i>
+                                                            </div>
+                                                            <div class="single-feature-titles">
+                                                                <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities}}</h3>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-check"></i>
+                                                    </div><!-- end col-lg-6 -->
+                                                    <div class="col-lg-6 responsive-column">
+                                                        <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                <i class="la la-check"></i>
+                                                            </div>
+                                                            <div class="single-feature-titles">
+                                                                <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities1}}</h3>
+                                                            </div>
                                                         </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">2 Single beds</h3>
+                                                    </div><!-- end col-lg-6 -->
+                                                    <div class="col-lg-6 responsive-column">
+                                                        <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                <i class="la la-check"></i>
+                                                            </div>
+                                                            <div class="single-feature-titles">
+                                                                <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities2}}</h3>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-check"></i>
+                                                    </div><!-- end col-lg-6 -->
+                                                    <div class="col-lg-6 responsive-column">
+                                                        <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                <i class="la la-check"></i>
+                                                            </div>
+                                                            <div class="single-feature-titles">
+                                                                <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities3}}</h3>
+                                                            </div>
                                                         </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">15 m²</h3>
+                                                    </div><!-- end col-lg-6 -->
+                                                    <div class="col-lg-6 responsive-column">
+                                                        <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                            <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                <i class="la la-check"></i>
+                                                            </div>
+                                                            <div class="single-feature-titles">
+                                                                <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities4}}</h3>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-check"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">Shower and bathtub</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-check"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">Shower and bathtub</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-check"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">Shower and bathtub</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-check"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">Shower and bathtub</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                            </div><!-- end row -->
-                                            <div class="room-photos">
-                                                <a class="btn theme-btn-hover-gray" data-src="images/img1.jpg"
-                                                   data-fancybox="gallery"
-                                                   data-caption="Showing image - 01"
-                                                   data-speed="700">
-                                                    <i class="la la-photo mr-2"></i>Room Photos
-                                                </a>
-                                                <a class="d-none"
-                                                   data-fancybox="gallery"
-                                                   data-src="images/img2.jpg"
-                                                   data-caption="Showing image - 02"
-                                                   data-speed="700"></a>
-                                                <a class="d-none"
-                                                   data-fancybox="gallery"
-                                                   data-src="images/img3.jpg"
-                                                   data-caption="Showing image - 03"
-                                                   data-speed="700"></a>
-                                                <a class="d-none"
-                                                   data-fancybox="gallery"
-                                                   data-src="images/img4.jpg"
-                                                   data-caption="Showing image - 04"
-                                                   data-speed="700"></a>
+                                                    </div><!-- end col-lg-6 -->
+                                                    @if($room->room_amenities5)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities5}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities6)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities6}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities7)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities7}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities8)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities8}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities9)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities9}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities10)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities10}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities11)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities11}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities12)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities12}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities14)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities14}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities15)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities15}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities16)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities16}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities17)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities17}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities18)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities18}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities19)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities19}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities20)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities20}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities21)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities21}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                    @if($room->room_amenities22)
+                                                        <div class="col-lg-6 responsive-column">
+                                                            <div class="single-tour-feature d-flex align-items-center mb-3">
+                                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
+                                                                    <i class="la la-check"></i>
+                                                                </div>
+                                                                <div class="single-feature-titles">
+                                                                    <h3 class="title font-size-15 font-weight-medium">{{$room->room_amenities22}}</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end col-lg-6 -->
+                                                    @endif
+                                                </div><!-- end row -->
                                             </div>
-                                        </div>
-                                        <div class="cabin-price">
-                                            <p class="text-uppercase font-size-14">Per/night<strong class="mt-n1 text-black font-size-18 font-weight-black d-block">$121</strong></>
-                                            <div class="custom-checkbox mb-0">
-                                                <input type="checkbox" id="selectChb1">
-                                                <label for="selectChb1" class="theme-btn theme-btn-small">Select</label>
+                                            <div class="cabin-price">
+                                                <p class="text-uppercase font-size-14">Per/night<strong class="mt-n1 text-black font-size-18 font-weight-black d-block">Ksh {{$room->room_amount}}</strong></>
+                                                <div class="custom-checkbox mb-0">
+                                                    <label for="selectChb1" class="theme-btn theme-btn-small">Select</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div><!-- end cabin-type-item -->
-                                </div><!-- end cabin-type -->
-                                <div class="cabin-type padding-top-30px">
-                                    <div class="cabin-type-item seat-selection-item d-flex">
-                                        <div class="cabin-type-img flex-shrink-0">
-                                            <img src="images/oceanview-cabin.jpg" alt="">
-                                        </div>
-                                        <div class="cabin-type-detail">
-                                            <h3 class="title">Superior Double Room</h3>
-                                            <div class="row padding-top-20px">
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-wifi"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">Free Wi-Fi</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-bed"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">2 Single beds</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-building"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">15 m²</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-hotel"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">Shower and bathtub</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                            </div><!-- end row -->
-                                            <div class="room-photos">
-                                                <a class="btn theme-btn-hover-gray" data-src="images/img1.jpg"
-                                                   data-fancybox="gallery"
-                                                   data-caption="Showing image - 01"
-                                                   data-speed="700">
-                                                    <i class="la la-photo mr-2"></i>Room Photos
-                                                </a>
-                                                <a class="d-none"
-                                                   data-fancybox="gallery"
-                                                   data-src="images/img2.jpg"
-                                                   data-caption="Showing image - 02"
-                                                   data-speed="700"></a>
-                                                <a class="d-none"
-                                                   data-fancybox="gallery"
-                                                   data-src="images/img3.jpg"
-                                                   data-caption="Showing image - 03"
-                                                   data-speed="700"></a>
-                                                <a class="d-none"
-                                                   data-fancybox="gallery"
-                                                   data-src="images/img4.jpg"
-                                                   data-caption="Showing image - 04"
-                                                   data-speed="700"></a>
-                                            </div>
-                                        </div>
-                                        <div class="cabin-price">
-                                            <p class="text-uppercase font-size-14">Per/night<strong class="mt-n1 text-black font-size-18 font-weight-black d-block">$121</strong></>
-                                            <div class="custom-checkbox mb-0">
-                                                <input type="checkbox" id="selectChb2">
-                                                <label for="selectChb2" class="theme-btn theme-btn-small">Select</label>
-                                            </div>
-                                        </div>
-                                    </div><!-- end cabin-type-item -->
-                                </div><!-- end cabin-type -->
-                                <div class="cabin-type padding-top-30px">
-                                    <div class="cabin-type-item seat-selection-item d-flex">
-                                        <div class="cabin-type-img flex-shrink-0">
-                                            <img src="images/balcony-cabin.jpg" alt="">
-                                        </div>
-                                        <div class="cabin-type-detail">
-                                            <h3 class="title">Deluxe Single Room</h3>
-                                            <div class="row padding-top-20px">
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-wifi"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">Free Wi-Fi</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-bed"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">2 Single beds</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-building"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">15 m²</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-hotel"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">Shower and bathtub</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                            </div><!-- end row -->
-                                            <div class="room-photos">
-                                                <a class="btn theme-btn-hover-gray" data-src="images/img1.jpg"
-                                                   data-fancybox="gallery"
-                                                   data-caption="Showing image - 01"
-                                                   data-speed="700">
-                                                    <i class="la la-photo mr-2"></i>Room Photos
-                                                </a>
-                                                <a class="d-none"
-                                                   data-fancybox="gallery"
-                                                   data-src="images/img2.jpg"
-                                                   data-caption="Showing image - 02"
-                                                   data-speed="700"></a>
-                                                <a class="d-none"
-                                                   data-fancybox="gallery"
-                                                   data-src="images/img3.jpg"
-                                                   data-caption="Showing image - 03"
-                                                   data-speed="700"></a>
-                                                <a class="d-none"
-                                                   data-fancybox="gallery"
-                                                   data-src="images/img4.jpg"
-                                                   data-caption="Showing image - 04"
-                                                   data-speed="700"></a>
-                                            </div>
-                                        </div>
-                                        <div class="cabin-price">
-                                            <p class="text-uppercase font-size-14">Per/night<strong class="mt-n1 text-black font-size-18 font-weight-black d-block">$121</strong></>
-                                            <div class="custom-checkbox mb-0">
-                                                <input type="checkbox" id="selectChb3">
-                                                <label for="selectChb3" class="theme-btn theme-btn-small">Select</label>
-                                            </div>
-                                        </div>
-                                    </div><!-- end cabin-type-item -->
-                                </div><!-- end cabin-type -->
-                                <div class="cabin-type padding-top-30px">
-                                    <div class="cabin-type-item seat-selection-item d-flex">
-                                        <div class="cabin-type-img flex-shrink-0">
-                                            <img src="images/suite-cabin.jpg" alt="">
-                                        </div>
-                                        <div class="cabin-type-detail">
-                                            <h3 class="title">Single Bed Room</h3>
-                                            <div class="row padding-top-20px">
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-wifi"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">Free Wi-Fi</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-bed"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">1 Single beds</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-building"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">15 m²</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                                <div class="col-lg-6 responsive-column">
-                                                    <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                        <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-2">
-                                                            <i class="la la-hotel"></i>
-                                                        </div>
-                                                        <div class="single-feature-titles">
-                                                            <h3 class="title font-size-15 font-weight-medium">Shower and bathtub</h3>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col-lg-6 -->
-                                            </div><!-- end row -->
-                                            <div class="room-photos">
-                                                <a class="btn theme-btn-hover-gray" data-src="images/img1.jpg"
-                                                   data-fancybox="gallery"
-                                                   data-caption="Showing image - 01"
-                                                   data-speed="700">
-                                                    <i class="la la-photo mr-2"></i>Room Photos
-                                                </a>
-                                                <a class="d-none"
-                                                   data-fancybox="gallery"
-                                                   data-src="images/img2.jpg"
-                                                   data-caption="Showing image - 02"
-                                                   data-speed="700"></a>
-                                                <a class="d-none"
-                                                   data-fancybox="gallery"
-                                                   data-src="images/img3.jpg"
-                                                   data-caption="Showing image - 03"
-                                                   data-speed="700"></a>
-                                                <a class="d-none"
-                                                   data-fancybox="gallery"
-                                                   data-src="images/img4.jpg"
-                                                   data-caption="Showing image - 04"
-                                                   data-speed="700"></a>
-                                            </div>
-                                        </div>
-                                        <div class="cabin-price">
-                                            <p class="text-uppercase font-size-14">Per/night<strong class="mt-n1 text-black font-size-18 font-weight-black d-block">$121</strong></>
-                                            <div class="custom-checkbox mb-0">
-                                                <input type="checkbox" id="selectChb4">
-                                                <label for="selectChb4" class="theme-btn theme-btn-small">Select</label>
-                                            </div>
-                                        </div>
-                                    </div><!-- end cabin-type-item -->
-                                </div><!-- end cabin-type -->
+                                        </div><!-- end cabin-type-item -->
+                                    </div><!-- end cabin-type -->
+                                @endforeach
+
                             </div><!-- end single-content-item -->
                             <div class="section-block"></div>
                         </div><!-- end location-map -->
-                        <div id="amenities" class="page-scroll">
-                            <div class="single-content-item padding-top-40px padding-bottom-20px">
-                                <h3 class="title font-size-20">Amenities</h3>
-                                <div class="amenities-feature-item pt-4">
-                                    <div class="row">
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-wifi"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">WI-FI</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-check"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Swimming Pool</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-television"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Television</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-coffee"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Coffee</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-tree"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Air Conditioning</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-gear"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Fitness Facility</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-check"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Fridge</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-glass"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Wine Bar</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-music"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Entertainment</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-lock"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Secure Vault</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-car"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Pick And Drop</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-check"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Room Service</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-check-circle"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Pets Allowed</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-coffee"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Breakfast</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-car"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Free Parking</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-fire"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Fire Place</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-wheelchair"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Handicap Accessible</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-user-secret"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Doorman</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-building"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Elevator In Building</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-gift"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Suitable For Events</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-4 responsive-column">
-                                            <div class="single-tour-feature d-flex align-items-center mb-3">
-                                                <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">
-                                                    <i class="la la-gamepad"></i>
-                                                </div>
-                                                <div class="single-feature-titles">
-                                                    <h3 class="title font-size-15 font-weight-medium">Play Place</h3>
-                                                </div>
-                                            </div><!-- end single-tour-feature -->
-                                        </div><!-- end col-lg-4 -->
-                                    </div><!-- end row -->
-                                </div>
-                            </div><!-- end single-content-item -->
-                            <div class="section-block"></div>
-                        </div><!-- end faq -->
                         <div id="faq" class="page-scroll">
                             <div class="single-content-item padding-top-40px padding-bottom-40px">
                                 <h3 class="title font-size-20">FAQs</h3>
@@ -2041,22 +1824,22 @@
 
 
 <!-- Template JS Files -->
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-select.min.js"></script>
-<script src="js/moment.min.js"></script>
-<script src="js/daterangepicker.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/jquery.countTo.min.js"></script>
-<script src="js/animated-headline.js"></script>
-<script src="js/jquery.ripples-min.js"></script>
-<script src="js/quantity-input.js"></script>
-<script src="js/copy-text-script.js"></script>
-<script src="js/navbar-sticky.js"></script>
-<script src="js/main.js"></script>
+<script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
+<script src="{{asset('js/jquery-ui.js')}}"></script>
+<script src="{{asset('js/popper.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/bootstrap-select.min.js')}}"></script>
+<script src="{{asset('js/moment.min.js')}}"></script>
+<script src="{{asset('js/daterangepicker.js')}}"></script>
+<script src="{{asset('js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('js/jquery.fancybox.min.js')}}"></script>
+<script src="{{asset('js/jquery.countTo.min.js')}}"></script>
+<script src="{{asset('js/animated-headline.js')}}"></script>
+<script src="{{asset('js/jquery.ripples-min.js')}}"></script>
+<script src="{{asset('js/quantity-input.js')}}"></script>
+<script src="{{asset('js/copy-text-script.js')}}"></script>
+<script src="{{asset('js/navbar-sticky.js')}}"></script>
+<script src="{{asset('js/main.js')}}"></script>
 </body>
 
 <!-- Mirrored from techydevs.com/demos/themes/html/trizen-demo/trizen/hotel-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Sep 2021 10:51:16 GMT -->

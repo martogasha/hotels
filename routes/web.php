@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/r', function () {
     return view('welcome');
 });
 
@@ -21,9 +21,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'index']);
+Route::get('/', [App\Http\Controllers\ClientController::class, 'home']);
 Route::get('/listing', [App\Http\Controllers\ClientController::class, 'index']);
 Route::get('/list', [App\Http\Controllers\ClientController::class, 'list']);
-Route::get('/single', [App\Http\Controllers\ClientController::class, 'single']);
+Route::get('/single/{id}', [App\Http\Controllers\ClientController::class, 'single']);
 Route::get('/addHotel', [App\Http\Controllers\ClientController::class, 'addHotel']);
 Route::post('/saveHotel', [App\Http\Controllers\ClientController::class, 'saveHotel'])->name('saveHotel');
 Route::post('/saveRoom', [App\Http\Controllers\ClientController::class, 'saveRoom'])->name('saveRoom');

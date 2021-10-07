@@ -476,10 +476,11 @@
             </div><!-- end col-lg-4 -->
             <div class="col-lg-8">
                 <div class="row">
+                    @foreach($hotels as $hotel)
                     <div class="col-lg-6 responsive-column">
                         <div class="card-item ">
                             <div class="card-img">
-                                <a href="tour-details.html" class="d-block">
+                                <a href="{{url('single',$hotel->id)}}" class="d-block">
                                     <img src="images/img9.jpg" alt="Destination-img">
                                 </a>
                                 <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Save for Later">
@@ -487,8 +488,8 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <h3 class="card-title"><a href="tour-details.html">Empire State Building Admission</a></h3>
-                                <p class="card-meta">124 E Huron St, New york</p>
+                                <h3 class="card-title"><a href="tour-details.html">{{$hotel->hotel_name}}</a></h3>
+                                <p class="card-meta">{{$hotel->city}}</p>
                                 <div class="card-rating">
                                     <span class="badge text-white">4.4/5</span>
                                     <span class="review__text">Average</span>
@@ -497,274 +498,14 @@
                                 <div class="card-price d-flex align-items-center justify-content-between">
                                     <p>
                                         <span class="price__from">From</span>
-                                        <span class="price__num">$124.00</span>
+                                        <span class="price__num">Ksh {{\App\Models\Room::where('hotel_id',$hotel->id)->min('room_amount')}}</span>
                                     </p>
                                     <span class="tour-hour"><i class="la la-clock-o mr-1"></i>Full day</span>
                                 </div>
                             </div>
                         </div><!-- end card-item -->
                     </div><!-- end col-lg-6 -->
-                    <div class="col-lg-6 responsive-column">
-                        <div class="card-item ">
-                            <div class="card-img">
-                                <a href="tour-details.html" class="d-block">
-                                    <img src="images/img10.jpg" alt="Destination-img">
-                                </a>
-                                <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Save for Later">
-                                    <i class="la la-heart-o"></i>
-                                </div>
-                                <span class="badge">Bestseller</span>
-                                <span class="badge badge-ribbon">24% Save</span>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title"><a href="tour-details.html">Hut on Blue Water Beach Tour</a></h3>
-                                <p class="card-meta">124 Nevada, Las Vegas</p>
-                                <div class="card-rating">
-                                    <span class="badge text-white">4.4/5</span>
-                                    <span class="review__text">Average</span>
-                                    <span class="rating__text">(30 Reviews)</span>
-                                </div>
-                                <div class="card-price d-flex align-items-center justify-content-between">
-                                    <p>
-                                        <span class="price__from">From</span>
-                                        <span class="price__num">$100.00</span>
-                                        <span class="price__num before-price color-text-3">$124.00</span>
-                                    </p>
-                                    <span class="tour-hour"><i class="la la-clock-o mr-1"></i>7 days</span>
-                                </div>
-                            </div>
-                        </div><!-- end card-item -->
-                    </div><!-- end col-lg-6 -->
-                    <div class="col-lg-6 responsive-column">
-                        <div class="card-item ">
-                            <div class="card-img">
-                                <a href="tour-details.html" class="d-block">
-                                    <img src="images/img9.jpg" alt="Destination-img">
-                                </a>
-                                <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Save for Later">
-                                    <i class="la la-heart-o"></i>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title"><a href="tour-details.html">Empire State Building Admission</a></h3>
-                                <p class="card-meta">124 E Huron St, New york</p>
-                                <div class="card-rating">
-                                    <span class="badge text-white">4.4/5</span>
-                                    <span class="review__text">Average</span>
-                                    <span class="rating__text">(30 Reviews)</span>
-                                </div>
-                                <div class="card-price d-flex align-items-center justify-content-between">
-                                    <p>
-                                        <span class="price__from">From</span>
-                                        <span class="price__num">$124.00</span>
-                                    </p>
-                                    <span class="tour-hour"><i class="la la-clock-o mr-1"></i>Full day</span>
-                                </div>
-                            </div>
-                        </div><!-- end card-item -->
-                    </div><!-- end col-lg-6 -->
-                    <div class="col-lg-6 responsive-column">
-                        <div class="card-item ">
-                            <div class="card-img">
-                                <a href="tour-details.html" class="d-block">
-                                    <img src="images/img10.jpg" alt="Destination-img">
-                                </a>
-                                <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Save for Later">
-                                    <i class="la la-heart-o"></i>
-                                </div>
-                                <span class="badge">Bestseller</span>
-                                <span class="badge badge-ribbon">24% Save</span>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title"><a href="tour-details.html">Hut on Blue Water Beach Tour</a></h3>
-                                <p class="card-meta">124 Nevada, Las Vegas</p>
-                                <div class="card-rating">
-                                    <span class="badge text-white">4.4/5</span>
-                                    <span class="review__text">Average</span>
-                                    <span class="rating__text">(30 Reviews)</span>
-                                </div>
-                                <div class="card-price d-flex align-items-center justify-content-between">
-                                    <p>
-                                        <span class="price__from">From</span>
-                                        <span class="price__num">$100.00</span>
-                                        <span class="price__num before-price color-text-3">$124.00</span>
-                                    </p>
-                                    <span class="tour-hour"><i class="la la-clock-o mr-1"></i>7 days</span>
-                                </div>
-                            </div>
-                        </div><!-- end card-item -->
-                    </div><!-- end col-lg-6 -->
-                    <div class="col-lg-6 responsive-column">
-                        <div class="card-item ">
-                            <div class="card-img">
-                                <a href="tour-details.html" class="d-block">
-                                    <img src="images/img11.jpg" alt="Destination-img">
-                                </a>
-                                <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Save for Later">
-                                    <i class="la la-heart-o"></i>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title"><a href="tour-details.html">Golden Gate Seaplane Tour</a></h3>
-                                <p class="card-meta">124 E Huron St, New york</p>
-                                <div class="card-rating">
-                                    <span class="badge text-white">4.4/5</span>
-                                    <span class="review__text">Average</span>
-                                    <span class="rating__text">(30 Reviews)</span>
-                                </div>
-                                <div class="card-price d-flex align-items-center justify-content-between">
-                                    <p>
-                                        <span class="price__from">From</span>
-                                        <span class="price__num">$124.00</span>
-                                    </p>
-                                    <span class="tour-hour"><i class="la la-clock-o mr-1"></i>8 Hours</span>
-                                </div>
-                            </div>
-                        </div><!-- end card-item -->
-                    </div><!-- end col-lg-6 -->
-                    <div class="col-lg-6 responsive-column">
-                        <div class="card-item ">
-                            <div class="card-img">
-                                <a href="tour-details.html" class="d-block">
-                                    <img src="images/img12.jpg" alt="Destination-img">
-                                </a>
-                                <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Save for Later">
-                                    <i class="la la-heart-o"></i>
-                                </div>
-                                <span class="badge">Featured</span>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title"><a href="tour-details.html">Two Hours Guided Horseback Tour</a></h3>
-                                <p class="card-meta">124 E Huron St, New york</p>
-                                <div class="card-rating">
-                                    <span class="badge text-white">4.4/5</span>
-                                    <span class="review__text">Average</span>
-                                    <span class="rating__text">(30 Reviews)</span>
-                                </div>
-                                <div class="card-price d-flex align-items-center justify-content-between">
-                                    <p>
-                                        <span class="price__from">From</span>
-                                        <span class="price__num">$124.00</span>
-                                    </p>
-                                    <span class="tour-hour"><i class="la la-clock-o mr-1"></i>3 days</span>
-                                </div>
-                            </div>
-                        </div><!-- end card-item -->
-                    </div><!-- end col-lg-6 -->
-                    <div class="col-lg-6 responsive-column">
-                        <div class="card-item ">
-                            <div class="card-img">
-                                <a href="tour-details.html" class="d-block">
-                                    <img src="images/img13.jpg" alt="Destination-img">
-                                </a>
-                                <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Save for Later">
-                                    <i class="la la-heart-o"></i>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title"><a href="tour-details.html">Scuba Diving in Boyton Beach</a></h3>
-                                <p class="card-meta">124 Nevada, New Jersey</p>
-                                <div class="card-rating">
-                                    <span class="badge text-white">4.4/5</span>
-                                    <span class="review__text">Average</span>
-                                    <span class="rating__text">(30 Reviews)</span>
-                                </div>
-                                <div class="card-price d-flex align-items-center justify-content-between">
-                                    <p>
-                                        <span class="price__from">From</span>
-                                        <span class="price__num">$124.00</span>
-                                    </p>
-                                    <span class="tour-hour"><i class="la la-clock-o mr-1"></i>3-5 hours</span>
-                                </div>
-                            </div>
-                        </div><!-- end card-item -->
-                    </div><!-- end col-lg-6 -->
-                    <div class="col-lg-6 responsive-column">
-                        <div class="card-item ">
-                            <div class="card-img">
-                                <a href="tour-details.html" class="d-block">
-                                    <img src="images/img14.jpg" alt="Destination-img">
-                                </a>
-                                <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Save for Later">
-                                    <i class="la la-heart-o"></i>
-                                </div>
-                                <span class="badge">Featured</span>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title"><a href="tour-details.html">Mangrove Tunnel Kayak Eco Tour</a></h3>
-                                <p class="card-meta">212 Colin road, Canada</p>
-                                <div class="card-rating">
-                                    <span class="badge text-white">4.4/5</span>
-                                    <span class="review__text">Average</span>
-                                    <span class="rating__text">(30 Reviews)</span>
-                                </div>
-                                <div class="card-price d-flex align-items-center justify-content-between">
-                                    <p>
-                                        <span class="price__from">From</span>
-                                        <span class="price__num">$124.00</span>
-                                    </p>
-                                    <span class="tour-hour"><i class="la la-clock-o mr-1"></i>1 day</span>
-                                </div>
-                            </div>
-                        </div><!-- end card-item -->
-                    </div><!-- end col-lg-6 -->
-                    <div class="col-lg-6 responsive-column">
-                        <div class="card-item ">
-                            <div class="card-img">
-                                <a href="tour-details.html" class="d-block">
-                                    <img src="images/img13.jpg" alt="Destination-img">
-                                </a>
-                                <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Save for Later">
-                                    <i class="la la-heart-o"></i>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title"><a href="tour-details.html">Scuba Diving in Boyton Beach</a></h3>
-                                <p class="card-meta">124 Nevada, New Jersey</p>
-                                <div class="card-rating">
-                                    <span class="badge text-white">4.4/5</span>
-                                    <span class="review__text">Average</span>
-                                    <span class="rating__text">(30 Reviews)</span>
-                                </div>
-                                <div class="card-price d-flex align-items-center justify-content-between">
-                                    <p>
-                                        <span class="price__from">From</span>
-                                        <span class="price__num">$124.00</span>
-                                    </p>
-                                    <span class="tour-hour"><i class="la la-clock-o mr-1"></i>3-5 hours</span>
-                                </div>
-                            </div>
-                        </div><!-- end card-item -->
-                    </div><!-- end col-lg-6 -->
-                    <div class="col-lg-6 responsive-column">
-                        <div class="card-item ">
-                            <div class="card-img">
-                                <a href="tour-details.html" class="d-block">
-                                    <img src="images/img14.jpg" alt="Destination-img">
-                                </a>
-                                <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Save for Later">
-                                    <i class="la la-heart-o"></i>
-                                </div>
-                                <span class="badge">Featured</span>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title"><a href="tour-details.html">Mangrove Tunnel Kayak Eco Tour</a></h3>
-                                <p class="card-meta">212 Colin road, Canada</p>
-                                <div class="card-rating">
-                                    <span class="badge text-white">4.4/5</span>
-                                    <span class="review__text">Average</span>
-                                    <span class="rating__text">(30 Reviews)</span>
-                                </div>
-                                <div class="card-price d-flex align-items-center justify-content-between">
-                                    <p>
-                                        <span class="price__from">From</span>
-                                        <span class="price__num">$124.00</span>
-                                    </p>
-                                    <span class="tour-hour"><i class="la la-clock-o mr-1"></i>1 day</span>
-                                </div>
-                            </div>
-                        </div><!-- end card-item -->
-                    </div><!-- end col-lg-6 -->
+                    @endforeach
                 </div><!-- end row -->
                 <div class="row">
                     <div class="col-lg-12">
