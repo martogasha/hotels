@@ -1600,7 +1600,6 @@
                         <span class="badge">Nairobi</span>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title"><a href="tour-details.html">Main Street Park</a></h3>
                         <div class="card-rating d-flex align-items-center">
                             <span class="ratings d-flex align-items-center mr-1">
                                 <i class="la la-star"></i>
@@ -1628,7 +1627,6 @@
                         <span class="badge">Mombasa</span>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title"><a href="tour-details.html">Chicago Cultural Center</a></h3>
                         <div class="card-rating d-flex align-items-center">
                             <span class="ratings d-flex align-items-center mr-1">
                                 <i class="la la-star"></i>
@@ -1658,7 +1656,6 @@
                         <span class="badge">Nakuru</span>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title"><a href="tour-details.html">Lugard Road Lookout</a></h3>
                         <div class="card-rating d-flex align-items-center">
                             <span class="ratings d-flex align-items-center mr-1">
                                 <i class="la la-star"></i>
@@ -1683,11 +1680,10 @@
                 </div><!-- end card-item -->
                 <div class="card-item destination-card">
                     <div class="card-img">
-                        <img src="images/destination-img5.jpg" alt="destination-img">
-                        <span class="badge">Naivasha</span>
+                        <img src="images/KISUMU CITY.JPG" alt="destination-img">
+                        <span class="badge">Kisumu</span>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title"><a href="tour-details.html">Planet Hollywood Resort</a></h3>
                         <div class="card-rating d-flex align-items-center">
                             <span class="ratings d-flex align-items-center mr-1">
                                 <i class="la la-star"></i>
@@ -1717,7 +1713,6 @@
                         <span class="badge">ELDORET</span>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title"><a href="tour-details.html">Oriental Pearl TV Tower</a></h3>
                         <div class="card-rating d-flex align-items-center">
                             <span class="ratings d-flex align-items-center mr-1">
                                 <i class="la la-star"></i>
@@ -1767,7 +1762,7 @@
                         <div class="card-item mb-0">
                             <div class="card-img">
                                 <a href="hotel-single.html" class="d-block">
-                                    <img src="images/img1.jpg" alt="hotel-img">
+                                    <img src="images/Hotels.jpg" alt="hotel-img">
                                 </a>
                                 <span class="badge">Bestseller</span>
                                 <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Bookmark">
@@ -1782,7 +1777,7 @@
                         <div class="card-item mb-0">
                             <div class="card-img">
                                 <a href="hotel-single.html" class="d-block">
-                                    <img src="images/img1.jpg" alt="hotel-img">
+                                    <img src="images/Apartments.jpg" alt="hotel-img">
                                 </a>
                                 <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Bookmark">
                                     <i class="la la-heart-o"></i>
@@ -1796,7 +1791,7 @@
                         <div class="card-item mb-0">
                             <div class="card-img">
                                 <a href="hotel-single.html" class="d-block">
-                                    <img src="images/img1.jpg" alt="hotel-img">
+                                    <img src="images/Resorts.jpg" alt="hotel-img">
                                 </a>
                                 <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Bookmark">
                                     <i class="la la-heart-o"></i>
@@ -1810,7 +1805,7 @@
                         <div class="card-item mb-0">
                             <div class="card-img">
                                 <a href="hotel-single.html" class="d-block">
-                                    <img src="images/img1.jpg" alt="hotel-img">
+                                    <img src="images/Villas.jpg" alt="hotel-img">
                                 </a>
                                 <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Bookmark">
                                     <i class="la la-heart-o"></i>
@@ -1824,7 +1819,7 @@
                         <div class="card-item mb-0">
                             <div class="card-img">
                                 <a href="hotel-single.html" class="d-block">
-                                    <img src="images/img1.jpg" alt="hotel-img">
+                                    <img src="images/Cabins.jpg" alt="hotel-img">
                                 </a>
                                 <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Bookmark">
                                     <i class="la la-heart-o"></i>

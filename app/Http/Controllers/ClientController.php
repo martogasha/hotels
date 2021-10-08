@@ -15,6 +15,12 @@ class ClientController extends Controller
             'hotels'=>$hotels
         ]);
     }
+    public function flights(){
+        return view('flights');
+    }
+    public function flightSingle(){
+        return view('flightSingle');
+    }
     public function home(){
         $hotels = Hotel::all();
             return view('welcome',[

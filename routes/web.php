@@ -22,6 +22,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'index']);
 Route::get('/', [App\Http\Controllers\ClientController::class, 'home']);
+Route::get('flights', [App\Http\Controllers\ClientController::class, 'flights']);
+Route::get('flight', [App\Http\Controllers\ClientController::class, 'flightSingle']);
 Route::get('/listing', [App\Http\Controllers\ClientController::class, 'index']);
 Route::get('/list', [App\Http\Controllers\ClientController::class, 'list']);
 Route::get('/single/{id}', [App\Http\Controllers\ClientController::class, 'single']);
