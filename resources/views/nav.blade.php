@@ -52,8 +52,8 @@
                     <div class="header-top-content">
                         <div class="header-left">
                             <ul class="list-items">
-                                <li><a href="#"><i class="la la-phone mr-1"></i>(123) 123-456</a></li>
-                                <li><a href="#"><i class="la la-envelope mr-1"></i>trizen@example.com</a></li>
+                                <li><a href="#"><i class="la la-phone mr-1"></i>0727995279</a></li>
+                                <li><a href="#"><i class="la la-envelope mr-1"></i>info@hotelsbookinginkenya.co.ke</a></li>
                             </ul>
                         </div>
                     </div>

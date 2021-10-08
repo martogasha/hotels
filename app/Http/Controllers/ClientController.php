@@ -30,9 +30,13 @@ class ClientController extends Controller
     public function single($id){
         $hotel = Hotel::find($id);
         $rooms = Room::where('hotel_id',$id)->get();
+        $images = Image::where('hotel_id',$id)->get();
+        $img = Image::where('hotel_id',$id)->first();
         return view('single',[
             'hotel'=>$hotel,
-            'rooms'=>$rooms
+            'rooms'=>$rooms,
+            'images'=>$images,
+            'img'=>$img
         ]);
     }
     public function list(){

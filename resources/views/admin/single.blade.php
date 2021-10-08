@@ -28,14 +28,12 @@
 <!-- ================================
     START BREADCRUMB AREA
 ================================= -->
-<section class="breadcrumb-area bread-bg-7 py-0">
-    <div class="breadcrumb-wrap">
+<section class="breadcrumb-area bread-bg-7 py-0" style="background-image: url({{asset('uploads/product/'.$img->image)}})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-btn">
                         <div class="btn-box">
-
                             <a class="theme-btn" data-src="{{asset('uploads/product/'.$img->image)}}"
                                data-fancybox="gallery"
                                data-caption="Showing image - 01"
@@ -55,13 +53,7 @@
                 </div><!-- end col-lg-12 -->
             </div><!-- end row -->
         </div><!-- end container -->
-    </div><!-- end breadcrumb-wrap -->
 </section><!-- end breadcrumb-area -->
-<style>
-    .bread-bg-7 {
-        background-image: url(../images/img6.jpg);
-    }
-</style>
 <!-- ================================
     END BREADCRUMB AREA
 ================================= -->

@@ -601,7 +601,11 @@
 </div><!-- end modal-popup -->
 <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
+
         <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <section class="pricing-plans">
                 <!-- Pricing Tables -->
                 <div class="pricing-tables">
@@ -621,7 +625,7 @@
                             <li><span>Resource Library</span></li>
                             <li><span>Dedicated Support</span></li>
                         </ul>
-                        <a class="btn-plan" href="">Select Plan</a>
+                        <button class="btn btn-plan">Select</button>
                     </div>
                     <!-- "Basic" Plan -->
                     <!-- "Premium" Plan -->
@@ -641,7 +645,7 @@
                             <li><span>Resource Library</span></li>
                             <li><span>Dedicated Support</span></li>
                         </ul>
-                        <a class="btn-plan cta" href="">Select Plan</a>
+                        <button class="btn btn-plan">Select</button>
                     </div>
                     <!-- "Ultmate" Plan -->
                     <div class="pricing-plan">
@@ -659,7 +663,7 @@
                             <li>Resource Library</li>
                             <li>Dedicated Support</li>
                         </ul>
-                        <a class="btn-plan" href="">Select Plan</a>
+                        <button class="btn btn-plan">Select</button>
                     </div>
                 </div>
             </section>
