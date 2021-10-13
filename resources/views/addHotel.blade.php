@@ -31,6 +31,10 @@
 <!-- ================================
     START FORM AREA
 ================================= -->
+<button class="btn btn-primary" id="imageButton">Add Image</button>
+<button class="btn btn-primary" id="addRoom">Add Room</button>
+<button class="btn btn-primary" id="addHotel">Add Hotel</button>
+
 <section class="listing-form section--padding">
     <div class="container">
         <div class="row">
@@ -42,7 +46,7 @@
                 </div>
                 <form action="{{route('saveHotel')}}" method="post">
                     @csrf
-                    <div class="form-box">
+                    <div class="form-box" id="hotelAdd">
                             <div class="form-title-wrap">
                                 <h3 class="title"><i class="la la-user mr-2 text-gray"></i>Hotel information</h3>
                             </div><!-- form-title-wrap -->
@@ -746,7 +750,7 @@
                     </form>
                     <form action="{{route('saveImages')}}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <div class="form-box">
+                        <div class="form-box" id="imageView">
                             <div class="form-title-wrap">
                                 <h3 class="title"><i class="la la-photo mr-2 text-gray"></i>Hotel Photos</h3>
                             </div><!-- form-title-wrap -->
@@ -1047,6 +1051,21 @@
 <script src="js/main.js"></script>
 </body>
 <script>
+    $("#imageButton").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#imageView").offset().top
+        }, 2000);
+    });
+    $("#addHotel").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#hotelAdd").offset().top
+        }, 2000);
+    });
+    $("#addRoom").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#duplicate").offset().top
+        }, 2000);
+    });
     $(document).ready(function() {
         $('.clone').hide();
         $(".btn-success").click(function(){
