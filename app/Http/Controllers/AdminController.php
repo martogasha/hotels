@@ -30,4 +30,16 @@ class AdminController extends Controller
             'img'=>$img
         ]);
     }
+    public function deleteHotel($id){
+        $findHotel = Hotel::find($id);
+        $findRoom = Room::where('hotel_id',$findHotel->id)->delete();
+        $findImage = Image::where('hotel_id',$findHotel->id)->delete();
+        $findHotel->delete();
+        return redirect(url('admin/listing'));
+    }
+    public function deleteRoom($id){
+        $deleteRoom = Room::find($id);
+        $deleteRoom->delete();
+        return redirect()->back();
+    }
 }

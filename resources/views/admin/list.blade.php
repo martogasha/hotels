@@ -237,7 +237,7 @@
                         <div class="card-price d-flex align-items-center justify-content-between">
                             <p>
                                 <span class="price__from">From</span>
-                                <span class="price__num">$124.00</span>
+                                <span class="price__num">Ksh {{\App\Models\Room::where('hotel_id',$hotel->id)->min('room_amount')}}</span>
                             </p>
                             <span class="tour-hour"><i class="la la-clock-o mr-1"></i>Full day</span>
                         </div>

@@ -86,6 +86,10 @@
                     <div class="single-content-wrap padding-top-60px">
                         <div id="description" class="page-scroll">
                             <div class="single-content-item pb-4">
+
+                                    <button class="btn btn-danger" data-toggle="modal" data-target="#deleteHotel">Delete Hotel</button>
+
+
                                 <h3 class="title font-size-26">{{$hotel->hotel_name}}</h3>
                                 <div class="d-flex align-items-center pt-2">
                                     <p class="mr-2">{{$hotel->city}}</p>
@@ -658,12 +662,30 @@
                                         </div>
                                         <div class="cabin-price">
                                             <p class="text-uppercase font-size-14">Per/night<strong class="mt-n1 text-black font-size-18 font-weight-black d-block">Ksh {{$room->room_amount}}</strong></>
-                                            <div class="custom-checkbox mb-0">
-                                                <label for="selectChb1" class="theme-btn theme-btn-small">Select</label>
-                                            </div>
+                                                <button class="btn btn-danger" data-toggle="modal" data-target="#deleteRoom">Delete Room</button>
+
                                         </div>
                                     </div><!-- end cabin-type-item -->
                                 </div><!-- end cabin-type -->
+                                    <div class="modal fade" id="deleteRoom" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Are you sure to remove <b style="color: red">{{$room->room_name}}</b> (<b style="color: #0a53be">{{$hotel->hotel_name}} Hotel</b>)</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <form action="{{url('deleteRoom',$room->id)}}" method="post">
+                                                        @csrf
+                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 @endforeach
 
                             </div><!-- end single-content-item -->
@@ -1628,7 +1650,25 @@
         </div>
     </div>
 </div><!-- end modal-popup -->
-
+<div class="modal fade" id="deleteHotel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Are you sure to remove <b style="color: red">{{$hotel->hotel_name}} Hotel</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <form action="{{url('deleteHotel',$hotel->id)}}" method="post">
+                    @csrf
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Template JS Files -->
 <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>

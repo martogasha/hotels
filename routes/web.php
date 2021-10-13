@@ -32,5 +32,7 @@ Route::post('/saveHotel', [App\Http\Controllers\ClientController::class, 'saveHo
 Route::post('/saveRoom', [App\Http\Controllers\ClientController::class, 'saveRoom'])->name('saveRoom');
 Route::post('/saveImages', [App\Http\Controllers\ClientController::class, 'saveImages'])->name('saveImages');
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index']);
+Route::post('deleteHotel/{id}', [App\Http\Controllers\AdminController::class, 'deleteHotel']);
+Route::post('deleteRoom/{id}', [App\Http\Controllers\AdminController::class, 'deleteRoom']);
 Route::get('/admin/listing', [App\Http\Controllers\AdminController::class, 'listing']);
 Route::get('/admin/single/{id}', [App\Http\Controllers\AdminController::class, 'single']);
