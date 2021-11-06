@@ -1,5 +1,5 @@
 @include('nav')
-<title>hotelbookingsinkenya - Travel across the world</title>
+<title>Hotel bookings in kenya - Travel across the world</title>
 
 <!-- ================================
          END HEADER AREA
