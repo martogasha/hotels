@@ -28,12 +28,11 @@
                 <div class="footer-item">
                     <h4 class="title curve-shape pb-3 margin-bottom-20px" data-text="curvs">Other Links</h4>
                     <ul class="list-items list--items">
-                        <li><a href="#">USA Vacation Packages</a></li>
-                        <li><a href="#">USA Flights</a></li>
-                        <li><a href="#">USA Hotels</a></li>
-                        <li><a href="#">USA Car Hire</a></li>
+                        <li><a href="#">Kenya Vacation Packages</a></li>
+                        <li><a href="#">Kenya Flights</a></li>
+                        <li><a href="#">Kenya Hotels</a></li>
+                        <li><a href="#">Kenya Car Hire</a></li>
                         <li><a href="#">Create an Account</a></li>
-                        <li><a href="#">Trizen Reviews</a></li>
                     </ul>
                 </div><!-- end footer-item -->
             </div><!-- end col-lg-3 -->
