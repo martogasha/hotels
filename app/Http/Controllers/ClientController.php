@@ -23,7 +23,7 @@ class ClientController extends Controller
     }
     public function home(){
         $hotels = Hotel::all();
-            return view('welcome',[
+            return view('maintanance',[
                 'hotels'=>$hotels
             ]);
     }

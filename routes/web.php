@@ -35,4 +35,5 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index']);
 Route::post('deleteHotel/{id}', [App\Http\Controllers\AdminController::class, 'deleteHotel']);
 Route::post('deleteRoom/{id}', [App\Http\Controllers\AdminController::class, 'deleteRoom']);
 Route::get('/admin/listing', [App\Http\Controllers\AdminController::class, 'listing']);
+Route::get('/admin/addUser', [App\Http\Controllers\AdminController::class, 'addUser']);
 Route::get('/admin/single/{id}', [App\Http\Controllers\AdminController::class, 'single']);

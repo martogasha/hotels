@@ -18,6 +18,9 @@ class AdminController extends Controller
             'hotels'=>$hotels
         ]);
     }
+    public function addUser(){
+        return view('admin.addUser');
+    }
     public function single($id){
         $hotel = Hotel::find($id);
         $rooms = Room::where('hotel_id',$id)->get();

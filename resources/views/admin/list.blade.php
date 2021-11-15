@@ -1,4 +1,5 @@
-@include('nav')
+@include('adminNav')
+<title>Hotel Listing :: Hotelbookingsinkenya</title>
 <!-- ================================
          END HEADER AREA
 ================================= -->
